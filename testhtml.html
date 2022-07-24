@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>2 Column Layout</title>
+	<style type="text/css">
+
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
+
+		#container {
+			padding-left: 30px;
+			padding-right: 60px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 10px;
+			width: 75%;
+		}
+		
+		
+		#right {
+			width: 25%;
+			padding: 0 20px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
+
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
+
+        .flex-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        text-align: center;
+        }
+
+        .flex-item-one {
+        background-color: #f1f1f1;
+        padding: 10px;
+        flex: 50%;
+        }
+
+        .flex-item-two {
+        background-color: rgb(164, 214, 46);
+        padding: 10px;
+        flex: 50%;
+        }
+
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: #fff;
+		}
+
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: darkgreen;
+			text-decoration: none;
+		}
+
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #c4fc7f;
+		}
+
+		
+		#right {
+			background: #98ff5d;
+		}
+
+		#center {
+			background: #fff;
+		}
+
+		#container .column {
+			padding-top: 1em;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		/* =============================
+		This script generates sample text for the body content. 
+		You can remove this script and any reference to it. 
+		 ============================= */
+		var bodyText=[
+            "ARTJOG MMXXII: Arts in Common - Expanding Awareness mengakhiri seri ARTJOG arts-in-common yang sejak 2019",
+            "membingkai ketiga pameran dalam triplet tematik ‘ruang’ – ‘waktu’ – ‘kesadaran’.",
+            "Tema ini dimaknai sebagai upaya perluasan kesadaran yang akumulatif dan resiprokal antara seniman dan khalayak dengan merefleksikan",
+            "realitas yang kini, masa depan, serta harapan-harapan yang harus diwujudkan. Salah satu agenda utama dalam Expanding Awareness",
+            "adalah memberikan perhatian pada kesenian yang mendukung inklusivitas. Hal yang diimplementasikan pada seleksi kuratorial,",
+            "program-program, dan penyelenggaraan secara lebih luas. ARTJOG arts-in-common bukan melulu soal ‘kesenian untuk semua’,",
+            "tapi juga tentang cita-cita terwujudnya sebuah dunia bersama."
+        ]
+		function generateText(sentenceCount){
+			for (var i=0; i<sentenceCount; i++)
+			document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+		}
+	</script>	
+</head>
+
+<body>
+
+	<header id="header"><p>Header</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+				<h1>Heading</h1>
+				<p><script>generateText(1)</script></p>
+			
+			</article>								
+		</main>
+
+		<div id="right" class="column">
+            <div class="colorside1"> 
+                <h3>Right heading 1</h3>
+                <p><script>generateText(1)</script></p>
+            </div>
+            <div class="colorside2">
+                <h3>Right heading 2</h3>
+                <p><script>generateText(1)</script></p>
+            </div>
+		</div>
+
+	</div>
+
+    <div class="featured_content">
+        <div class="flex-container">
+            <div class="flex-item-one">1</div>
+            <div class="flex-item-two">2</div>
+            <div class="flex-item-one">2</div>
+          </div>
+    </div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Footer</p></footer>
+	</div>
+
+</body>
+
+</html>
